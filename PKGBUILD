@@ -13,5 +13,5 @@ sha256sums=('SKIP')
 package() {
 	cd $srcdir/$pkgname
 	install -dm755 $pkgdir/usr/bin
-	cp -r kibojoe $pkgdir/usr/bin
+	cp -r $srcdir/$pkgname/kibojoe $pkgdir/usr/bin
 }
