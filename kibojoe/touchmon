@@ -226,7 +226,7 @@ in_array() {
 function save_settings {
 	echo -e "What should the new profile be called?"
 	read profile
-	autorandr.sh --save $profile
+	autorandr --save $profile
 	echo -e "Current settings were save under the name $profile"
 }
 

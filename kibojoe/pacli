@@ -277,7 +277,7 @@ function func_a
             ;;
          14)
             echo
-            /usr/bin/sysclean
+            /usr/bin/kibojoe/sysclean
             echo
             echo -e "Thank you for using SysClean! Return to Pacli press [Enter]"
             read        

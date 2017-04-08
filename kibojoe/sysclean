@@ -68,11 +68,11 @@ Attention: This command can break pacakges on your system or even your entire sy
 Removes unnecessary dependencies in stages.
 
 9 - REMOVE ORPHAN RECURSIVE
-"/usr/bin/undeps -ra"
+"/usr/bin/kibojoe/undeps -ra"
 Remove all unnecessary dependencies at once (recursively).
 
 10 - REMOVE EMPTY FILES
-"/usr/bin/empty_fileclean"
+"/usr/bin/kibojoe/empty_fileclean"
 The above command will remove all empty files in the /home.
 
 11 - REMOVE EMPTY FOLDRES
@@ -118,7 +118,7 @@ To exit this information page, press "q".
             ;;
           2)
             echo
-            /usr/bin/undeps -l
+            /usr/bin/kibojoe/undeps -l
             echo
             echo -e "List orphan packages listed! Return to SysClean press [Enter]"
             read
@@ -168,28 +168,28 @@ To exit this information page, press "q".
             ;;
           8)
             echo
-            /usr/bin/undeps -r
+            /usr/bin/kibojoe/undeps -r
             echo
             echo -e "Orphan by stages removed! Return to SysClean press [Enter]"
             read
             ;;
           9)
             echo
-            /usr/bin/undeps -ra
+            /usr/bin/kibojoe/undeps -ra
             echo
             echo -e "Orphan recursive removed! Return to SysClean press [Enter]"
             read
             ;;
           10)
 	    echo
-            /usr/bin/empty_fileclean
+            /usr/bin/kibojoe/empty_fileclean
             echo
             echo -e "Empty files removed! Return to SysClean press [Enter]"
             read
             ;;  
           11)
 	    echo
-            /usr/bin/empty_folderclean
+            /usr/bin/kibojoe/empty_folderclean
             echo
             echo -e "Empty folders renoved! Return to SysClean press [Enter]"
             read
