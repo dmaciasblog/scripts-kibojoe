@@ -18,7 +18,7 @@ Welcome to SysClean information page.
 SysClean is a script that works with some commands that help clean the system.
 
 ATTENTION
-*The number 7, 8, 9, 10, 11 and 12 can break your system. WARNING! USE WITH CAUTION.
+*The number 8, 9, 10, 11, 12 and 13 can break your system. WARNING! USE WITH CAUTION.
 
 e - EXIT SysClean
 "clear && exit"
@@ -35,51 +35,55 @@ Please note that folders created by the program <PACKAGE NAME> will not get remo
 ~/.config/
 ~/.local/
 
-2- LIST ORPHAN PACKAGES
+2- LIST REMOVED PACKAGES
+"cat /var/log/pacman.log | grep "remove""
+The command will search for all removed packages.
+
+3- LIST ORPHAN PACKAGES
 "undeps -l"
 List unnecessary system dependencies.
 
-3- LIST EMPTY FILES 
+4- LIST EMPTY FILES 
 "find ~ -type f -empty | wc -l"
 "find ~ -type f -empty -print"
 The above commands will look for how many empty files there are and what are these files in the /home.
 
-4- LIST EMPTY FOLDRES 
+5- LIST EMPTY FOLDRES 
 "find ~ -type d -empty | wc -l"
 "find ~ -type d -empty -print"
 The above commands will look for how many empty folders there are and what are these files in the /home.
 
-5 - LIMITED LOG JOURNALCTL
+6 - LIMITED LOG JOURNALCTL
 "sudo journalctl --vacuum-size=50M --vacuum-time=30days"
 This command limits all log files in journalctl to a combined size of 50 megabytes and a maximum age of 30 days. This leaves plenty of log files behind to analyze systematic and reoccuring errors while preventing excessive amounts of log files.
 
-6 - CLEANING OF THE DAY
+7 - CLEANING OF THE DAY
 "yaourt -Scc"
 This command will empty your entire package cache by deleting ALL packages.
 Attention: This will make it impossible to reinstall or DOWNGRADE PACKAGES without a working internet connection.
 
-7 - FORCE REMOVE PACKAGE
+8 - FORCE REMOVE PACKAGE
 "pacman -Rdd <PACKAGE NAME>"
 This command removes <PACKAGE NAME> without checking the dependencies of <PACKAGE NAME> first. This enables experienced users to remove packages and dependencies of packages. This command only removes <PACKAGE NAME> from your system. All dependencies and orphans are left: run REMOVE ORPHANED PACKAGES afterwards to remove them, too.
 Attention: This command can break pacakges on your system or even your entire system. Use with great care!
 
-8 - REMOVE ORPHAN BY STAGES
+9 - REMOVE ORPHAN BY STAGES
 "/usr/bin/undeps -r"
 Removes unnecessary dependencies in stages.
 
-9 - REMOVE ORPHAN RECURSIVE
+10 - REMOVE ORPHAN RECURSIVE
 "/usr/bin/kibojoe/undeps -ra"
 Remove all unnecessary dependencies at once (recursively).
 
-10 - REMOVE EMPTY FILES
+11 - REMOVE EMPTY FILES
 "/usr/bin/kibojoe/empty_fileclean"
 The above command will remove all empty files in the /home.
 
-11 - REMOVE EMPTY FOLDRES
+12 - REMOVE EMPTY FOLDRES
 "/usr/bin/empty_folderclean"
 The above command will remove all empty folders in the /home.
 
-12 - REMOVE PACKAGE CACHE
+13 - REMOVE PACKAGE CACHE
 "paccache -ruvk1
 paccache -rvk2"
 By default Pacman uses this cache direcoty for downloading packages: /var/cache/pacman/pkg/. No cached packages get deleted automatically. This enables you to DOWNGRADE PACKAGES, which are broken, without a working internet connection. The package cache of an old and actively used Manjaro installation can become quite large. Clean it to regain space on your root partition.
@@ -94,15 +98,16 @@ To exit this information page, press "q".
     echo ""
     echo -e "                     SysClean System Cleanup GNU/Linux"
     echo ""
-    echo -e "                           ✤ Kibojoe Linux ✤"
+    echo -e "                            ✤ Kibojoe Linux ✤"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
-    echo -e " │    1   Remove Package + Deps	           2   List Orphan Packages        │"
-    echo -e " │    3   List Empty Files                 4   List Empty Folders          │"
-    echo -e " │    5   Limit Log Journalctl             6   Cleaning of the Day         │"
+    echo -e " │    1   Remove Package + Deps	           2   List Removed Packages       │"
+    echo -e " │    3   List Orphan Packages		   4   List Empty Files	           │"
+    echo -e " │    5   List Empty Folders               6   Limit Log Journalctl        │"
+    echo -e " │    7   Cleaning of the Day 				                   │"
     echo -e " │-------------------------------------------------------------------------│"
-    echo -e " │    7  *Force Remove Package             8  *Remove Orphan by Stages     │"
-    echo -e " │    9  *Remove Orphan Recursive         10  *Remove Empty Files          │"
-    echo -e " │   11  *Remove Empty Folders            12  *Remove Package Cache        │"    
+    echo -e " │    8  *Force Remove Package             9  *Remove Orphan by Stages     │"
+    echo -e " │   10  *Remove Orphan Recursive         11  *Remove Empty Files          │"
+    echo -e " │   12  *Remove Empty Folders            13  *Remove Package Cache        │"    
     echo -e " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""    
     echo -e "       ✓ Select a number and press [Enter] ✓ e Exit ✓ i Information"
@@ -116,14 +121,21 @@ To exit this information page, press "q".
             echo -e "Package and all unneeded dependencies removed. Return to Pacli press [Enter]"
             read
             ;;
-          2)
+	  2)
+	    echo
+	    cat /var/log/pacman.log | grep "remove"
+            echo
+            echo -e "List removed packages listed! Return to SysClean press [Enter]"
+            read
+            ;;  
+          3)
             echo
             /usr/bin/kibojoe/undeps -l
             echo
             echo -e "List orphan packages listed! Return to SysClean press [Enter]"
             read
             ;;
-	  3)
+	  4)
             echo
             find ~ -type f -empty | wc -l
             echo
@@ -134,7 +146,7 @@ To exit this information page, press "q".
             echo -e "List empty files listed! Return to SysClean press [Enter]"
             read
             ;;
-	   4)
+	   5)
             echo
             find ~ -type d -empty | wc -l
             echo
@@ -145,56 +157,56 @@ To exit this information page, press "q".
             echo -e "List empty folders listed! Return to SysClean press [Enter]"
             read
             ;;
-          5)
+           6)
             echo
             sudo journalctl --vacuum-size=50M --vacuum-time=30days
             echo
             echo -e "Log journalctl limited! Return to SysClean press [Enter]"
             read
             ;;
-          6)
+           7)
             echo
             yaourt -Scc
             echo
             echo -e "Cleaning performed! Return to SysClean press [Enter]"
             read
             ;;
-           7)
+           8)
             echo
             sudo pacman -Rdd $(pacman -Qq | fzf --color fg:#0d1426,fg+:#d9cdb3,hl:#0d1426,hl+:#d9cdb3,prompt:#0d1426,info:#c0392b,pointer:#c0392b,spinner:#c0392b --reverse --prompt='Select package to remove (toggle selection with TAB) ▶ ') --color always
             echo
             echo -e "Dependency in force mode removed! Return to Pacli press [Enter]"
             read
             ;;
-          8)
+           9)
             echo
             /usr/bin/kibojoe/undeps -r
             echo
             echo -e "Orphan by stages removed! Return to SysClean press [Enter]"
             read
             ;;
-          9)
+	  10)
             echo
             /usr/bin/kibojoe/undeps -ra
             echo
             echo -e "Orphan recursive removed! Return to SysClean press [Enter]"
             read
             ;;
-          10)
+          11)
 	    echo
             /usr/bin/kibojoe/empty_fileclean
             echo
             echo -e "Empty files removed! Return to SysClean press [Enter]"
             read
             ;;  
-          11)
+          12)
 	    echo
             /usr/bin/kibojoe/empty_folderclean
             echo
             echo -e "Empty folders renoved! Return to SysClean press [Enter]"
             read
             ;;
-          12)
+          13)
             echo
             paccache -ruvk1
 	    paccache -rvk2
