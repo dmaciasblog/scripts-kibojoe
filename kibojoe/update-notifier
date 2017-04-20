@@ -1,4 +1,15 @@
 #!/bin/sh
+#
+###################################################
+# Kibojoe Linux 			          #
+# Updated 24.11.2010 11:02:02 		          #
+# Version 0.1-1 			          #
+# Name update-notifier ; Update Notifies          #
+# Use chmod +x update-notifier ; /usr/bin/kibojoe #
+# Credits Chrysostomus (Manjaro Linux)		  #
+# Adapted Holmes (Manjaro Brasil)                 #
+# License Copyleft                                #
+###################################################
 
 trap 'rm /tmp/{pacmanupdates,aurupdates} 2>/dev/null' INT TERM QUIT EXIT
 nb_pac=$(checkupdates | tee /tmp/pacmanupdates | wc -l)
