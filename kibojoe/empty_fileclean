@@ -1,16 +1,17 @@
 #!/bin/bash
 #
-#####################################################
-# Kibojoe Linux					    #
-# Updated 18.02.2017 18:23:49                       #
-# Version 0.1-1					    #
-# Name empty_fileclean ; Remove Empty Files Home    #
-# Use chmod +x empty_fileclean ; /usr/bin/kibojoe   #
-# Link sysclean ; pacli				    #
-# Credits Hugo Cisneiros			    #
-# Adaptation Holmes (Manjaro Brasil)                #
-# License Copyleft                                  #
-#####################################################
+###################################################
+# Kibojoe Linux					  #
+# Updated 18.02.2017 18:23:49                     #
+# Version 0.1-1					  #
+# Name empty_fileclean ; Remove Empty Files Home  #
+# Use chmod +x empty_fileclean ; /usr/bin/kibojoe #
+# Link sysclean ; pacli				  #
+# Credits Hugo Cisneiros (Devin)                  #
+# Site http://www.devin.com.br/shell_script/      #
+# Adaptation Holmes (Manjaro Brasil)              #
+# License Copyleft                                #
+###################################################
 
 main() {
   echo "Do you want to remove the empty files from the Home?"

@@ -4,10 +4,11 @@
 # Kibojoe Linux 			      #
 # Updated 24.11.2010 11:02:02 		      #
 # Version 0.1-1 			      #
-# Name undeps ; Unneeded Dependencies Tool    #
+# Name undeps ; Unneeded Dependencies Tool    # 
 # Use chmod +x undeps ; /usr/bin/kibojoe      #
 # Link sysclean ; pacli                       #
 # Credits Estêvão Valadão (Arch Linux Brasil) #
+# Site http://polr.me/1gmh                    #
 # Adapted Holmes (Manjaro Brasil)             #
 # License Copyleft                            #
 ###############################################

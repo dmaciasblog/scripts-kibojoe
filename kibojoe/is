@@ -1,15 +1,16 @@
 #!/bin/bash
 #
-###################################################################
-# Kibojoe Linux							  #
-# Updated 18.02.2017 23:04:49 					  #
-# Version 0.1-2 						  #
-# Name is ; IS Information System GNU/Linux			  #
-# Use chmod +x is ; /usr/bin/kibojoe				  #
-# Based pacli (credits pekman and excalibur1234 - Manjaro Linux)  #
-# Adapted Holmes (Manjaro Brasil) 				  #
-# License Copyleft						  #
-###################################################################
+##################################################################
+# Kibojoe Linux							 #
+# Updated 18.02.2017 23:04:49 					 #
+# Version 0.1-2 						 #
+# Name is ; IS Information System GNU/Linux			 #
+# Use chmod +x is ; /usr/bin/kibojoe				 #
+# Based pacli (credits pekman and excalibur1234 - Manjaro Linux) #
+# Site https://github.com/Manjaro-Pek/pacli                      #
+# Adapted Holmes (Manjaro Brasil) 				 #
+# License Copyleft						 #
+##################################################################
 
 function help_text() {
 	less 	<<-EOF
