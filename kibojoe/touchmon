@@ -1,16 +1,16 @@
 #!/bin/bash
 #
-###############################################
-# Kibojoe /Linux 			      #
-# Updated 18.02.2017 19:07:02 		      #
-# Version 0.1-2 			      #
-# Name touchmon ; TouchMon Configuration Tool #
-# Use chmod +x touchmon ; /usr/bin/kibojoe    #
-# Credits Chrysostomus (Manjaro Linux)        #
-# Site http://polr.me/1gmi        #
-# Adapted Holmes (Manjaro Brasil)             #
-# License Copyleft 			      #
-###############################################
+##################################################
+# Kibojoe /Linux 			         #
+# Updated 18.02.2017 19:07:02 		         #
+# Version 0.1-2 			         #
+# Name touchmon ; TouchMon Configuration Tool    #
+# Use chmod +x touchmon ; /usr/bin/kibojoe       #
+# Credits Chrysostomus (Manjaro Linux)           #
+# Site http://polr.me/1gmi ; http://polr.me/1gmq #
+# Adapted Holmes (Manjaro Brasil)                #
+# License Copyleft 			         #
+##################################################
 
 function help_text() {
 	less 	<<-EOF
