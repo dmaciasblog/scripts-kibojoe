@@ -4,7 +4,7 @@
 # Kibojoe Linux 					         #
 # Updated 18.02.2017 19:23:01 					 #
 # Version 0.1-1 						 #
-# Name sysclean ; SysClean System Cleanup GNU/Linux 		 #
+# Name sysclean ; System Cleanup GNU/Linux	 		 #
 # Use chmod +x sysclean ; /usr/bin/kibojoe			 #
 # Link pacli 							 #
 # Based pacli (credits pekman and excalibur1234 - Manjaro Linux) #
@@ -14,7 +14,7 @@
 
 function help_text() {
 	less 	<<-EOF
-Welcome to SysClean information page.
+Welcome to System Cleanup GNU/Linux information page.
 SysClean is a script that works with some commands that help clean the system.
 
 ATTENTION
@@ -96,7 +96,7 @@ To exit this information page, press "q".
     while true; do
     clear
     echo ""
-    echo -e "                     SysClean System Cleanup GNU/Linux"
+    echo -e "                         System Cleanup GNU/Linux"
     echo ""
     echo -e "                            ✤ Kibojoe Linux ✤"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
