@@ -1,8 +1,8 @@
 # Maintainer: Holmes <holmes_holmes [at] live [dot] com>
 
 pkgname=scripts-kibojoe
-pkgver=20170407
-pkgrel=1
+pkgver=201704
+pkgrel=2
 pkgdesc="Scripts for Kibojoe Linux"
 arch=('any')
 license=('GPL3')
