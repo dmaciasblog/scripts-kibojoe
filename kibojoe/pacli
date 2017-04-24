@@ -162,7 +162,7 @@ function func_a
     echo ""
     echo -e "                             Pacli Package Manager"
     echo ""
-    echo -e "                               ✤ Kibojoe Linux ✤"
+    echo -e "                         Manage your packages quickly!"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │    1     Update System                 2     Install Package            │"
     echo -e " │    3     Optimize Mirrors              4     Defragment Database        │"

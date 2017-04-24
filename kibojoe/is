@@ -109,7 +109,7 @@ To exit this information page, press "q".
     echo ""
     echo -e "                         IS Information System GNU/Linux"
     echo ""
-    echo -e "                               ✤ Kibojoe Linux ✤"
+    echo -e "                     Quick system information in your hands!"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │      1     Memory Summary                   2     BIOS Explore          │"
     echo -e " │      3     Processor Collect                4     List System           │"

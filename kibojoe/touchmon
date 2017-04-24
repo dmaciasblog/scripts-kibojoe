@@ -351,7 +351,7 @@ function set_primary {
     echo ""
     echo -e "                         TouchMon Configuration Tool"
     echo ""
-    echo -e "                             ✤ Kibojoe Linux ✤"
+    echo -e "                    Quick settings for touchpad/monitor!"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │    1     Set pointer speed              2     Toggle tap to click       │"
     echo -e " │    3     Toggle drag lock               4     Toggle left handed mode   │"

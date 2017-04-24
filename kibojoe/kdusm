@@ -115,7 +115,7 @@ function input {
     echo ""
     echo -e "                            KDU Settings Manager"
     echo ""
-    echo -e "                             ✤ Kibojoe Linux ✤"
+    echo -e "                    Manage some things from your system!"
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │    1   List Available Kernels           2   List Installed Kernels      │"
     echo -e " │    3  *Install a Kernel                 4  *Remove a Kernel             │"
