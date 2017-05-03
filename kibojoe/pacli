@@ -55,11 +55,11 @@ On traditional hard drives (HDD) this command can speed up all actions related t
 "pacman -Ql <PACKAGE NAME>"
 This command lists all files and their install directory contained in <PACKAGE NAME>. <PACKAGE NAME> must be installed on your system.
 
-6 - PACKAGE INFORMATION
+6 - GENERAL PACKAGE INFO
 "yaourt -Sii <PACKAGE NAME>"
 This command displays a lot of information about <PACKAGE NAME>.
 
-7 - INSTALLED PACKAGE INFORMATION
+7 - INSTALLED PACKAGE INFO
 "yaourt -Qii <PACKAGE NAME>"
 This command displays a lot of information about <PACKAGE NAME>. <PACKAGE NAME> must be installed on your system. This command displays other information (e.g. why and how a package was installed) than PACKAGE INFORMATION.
 
@@ -166,7 +166,7 @@ function func_a
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
     echo -e " │    1     Update System                 2     Install Package            │"
     echo -e " │    3     Optimize Mirrors              4     Defragment Database        │"
-    echo -e " │    5     List Local Package Files      6     Package Information        │"
+    echo -e " │    5     List Local Package Files      6     General Package Info       │"
     echo -e " │    7     Installed Package Info        8     Dependency Tree            │"
     echo -e " │    9     Reverse Dependency Tree      10     List Installed Packages    │"
     echo -e " │   11     Downgrade Packages           12     Fix Error Keys             │"
