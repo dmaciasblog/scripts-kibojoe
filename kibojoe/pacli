@@ -42,7 +42,7 @@ This command compares a list of all installed packages with package database on 
 This option downloads and installs <PACKAGE NAME> on your system. <PACKAGE NAME> must be a package from the Manjaro repositories.
 
 3 - OPTIMIZE MIRRORS
-"sudo pacman-mirrors -g -t 30 && sudo pacman -Syy"
+"sudo pacman-mirrors --geoip && sudo pacman -Syy"
 This command tests your connection to all available Manjaro repository mirrors/servers. The mirror with the best connection is automatically chosen for you. Additionally, the latest package database is downloaded from the chosen Manjaro repository mirror.
 If you want to speed up this command: Only test your connection quality to Manjaro mirrors/servers near you. Example: You have noticed the pings to German and French mirrors are always best for you. Then, you can run: "sudo pacman-mirrors -g -c Germany,France"
 
@@ -201,7 +201,7 @@ function func_a
             ;;
           3)
             echo
-            sudo pacman-mirrors -g -t 30 && sudo pacman -Syy --color always
+            sudo pacman-mirrors --geoip && sudo pacman -Syy --color always
             echo
             echo -e "Best Manjaro mirror chosen! Return to Pacli press [Enter]"
             read

@@ -265,7 +265,7 @@ main() {
 
 rank_sync_update(){
     print_title " ▶ Optimize Mirrors and Update"
-    sudo pacman-mirrors -g -t 30 && sudo pacman -Syyu
+    sudo pacman-mirrors --geoip && sudo pacman -Syyu
 }
 
 install_firewall(){
