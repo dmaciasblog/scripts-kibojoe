@@ -59,9 +59,9 @@ gost () {
 	codename=`lsb_release -c`
         
 	echo ""
-	echo -e "                            File Locate System"
+	echo -e "                               File Locate System"
         echo ""
-        echo -e "                        Locating everything for you!"
+        echo -e "                           Locating everything for you!"
 	echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"        
 	echo -e " │   ______ _                     _                                        │"
 	echo -e " │  |  ____| |                   | |                                       │"
