@@ -90,6 +90,11 @@ paccache -rvk2"
 By default Pacman uses this cache direcoty for downloading packages: /var/cache/pacman/pkg/. No cached packages get deleted automatically. This enables you to DOWNGRADE PACKAGES, which are broken, without a working internet connection. The package cache of an old and actively used Manjaro installation can become quite large. Clean it to regain space on your root partition.
 The first command removes all packages from cache, which are not installed (anymore) on your system. The second command removes all old packages from your cache except the 2 latest versions: The version you have currently installed on your system and the previous version.
 
+14 - REMOVE UNINSTALLED CACHE 
+"paccache -dvuk0
+paccache -rvuk0"
+The commands view the files of the uninstalled packages and remove the files from the uninstalled packages /var/cache/pacman/pkg/.
+
 To exit this information page, press "q".
 	EOF
 
@@ -108,7 +113,8 @@ To exit this information page, press "q".
     echo -e " │-------------------------------------------------------------------------│"
     echo -e " │    8  *Force Remove Package             9  *Remove Orphan by Stages     │"
     echo -e " │   10  *Remove Orphan Recursive         11  *Remove Empty Files          │"
-    echo -e " │   12  *Remove Empty Folders            13  *Remove Package Cache        │"    
+    echo -e " │   12  *Remove Empty Folders            13  *Remove Package Cache        │"
+    echo -e " │   14  *Remove Uninstalled Cache 				           │"    
     echo -e " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""    
     echo -e "       ✓ Select a number and press [Enter] ✓ e Exit ✓ i Information"
@@ -213,6 +219,14 @@ To exit this information page, press "q".
 	    paccache -rvk2
             echo
             echo -e "Package cache removed! Return to SysClean press [Enter]"
+            read
+            ;;
+	  14)
+            echo
+            paccache -dvuk0
+	    paccache -rvuk0
+            echo
+            echo -e "Removed the cache of uninstalled package! Return to SysClean press [Enter]"
             read
             ;;
           e)
