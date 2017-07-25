@@ -12,6 +12,6 @@
 #####################################################
 
 jwm -v | while read JWM VERSION OTHERGARBAGE; do
-echo $JWM $VERSION
+echo $VERSION
 exit
 done
