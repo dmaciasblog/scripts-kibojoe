@@ -63,34 +63,38 @@ This command limits all log files in journalctl to a combined size of 50 megabyt
 This command will empty your entire package cache by deleting ALL packages.
 Attention: This will make it impossible to reinstall or DOWNGRADE PACKAGES without a working internet connection.
 
-8 - FORCE REMOVE PACKAGE
+8 - PROFILE CLEANER BROWSER
+"profile-cleaner pm"
+Use profile-cleaner to reduce the size of browser profiles by organizing their sqlite databases using sqlite3's vacuum and reindex functions. 
+
+9 - FORCE REMOVE PACKAGE
 "pacman -Rdd <PACKAGE NAME>"
 This command removes <PACKAGE NAME> without checking the dependencies of <PACKAGE NAME> first. This enables experienced users to remove packages and dependencies of packages. This command only removes <PACKAGE NAME> from your system. All dependencies and orphans are left: run REMOVE ORPHANED PACKAGES afterwards to remove them, too.
 Attention: This command can break pacakges on your system or even your entire system. Use with great care!
 
-9 - REMOVE ORPHAN BY STAGES
+10 - REMOVE ORPHAN BY STAGES
 "/usr/bin/undeps -r"
 Removes unnecessary dependencies in stages.
 
-10 - REMOVE ORPHAN RECURSIVE
+11 - REMOVE ORPHAN RECURSIVE
 "/usr/bin/kibojoe/undeps -ra"
 Remove all unnecessary dependencies at once (recursively).
 
-11 - REMOVE EMPTY FILES
+12 - REMOVE EMPTY FILES
 "/usr/bin/kibojoe/empty_fileclean"
 The above command will remove all empty files in the /home.
 
-12 - REMOVE EMPTY FOLDRES
+13 - REMOVE EMPTY FOLDRES
 "/usr/bin/empty_folderclean"
 The above command will remove all empty folders in the /home.
 
-13 - REMOVE PACKAGE CACHE
+14 - REMOVE PACKAGE CACHE
 "paccache -ruvk1
 paccache -rvk2"
 By default Pacman uses this cache direcoty for downloading packages: /var/cache/pacman/pkg/. No cached packages get deleted automatically. This enables you to DOWNGRADE PACKAGES, which are broken, without a working internet connection. The package cache of an old and actively used Manjaro installation can become quite large. Clean it to regain space on your root partition.
 The first command removes all packages from cache, which are not installed (anymore) on your system. The second command removes all old packages from your cache except the 2 latest versions: The version you have currently installed on your system and the previous version.
 
-14 - REMOVE UNINSTALLED CACHE 
+15 - REMOVE UNINSTALLED CACHE 
 "paccache -dvuk0
 paccache -rvuk0"
 The commands view the files of the uninstalled packages and remove the files from the uninstalled packages /var/cache/pacman/pkg/.
@@ -109,12 +113,12 @@ To exit this information page, press "q".
     echo -e " │    1   Remove Package + Deps	           2   List Removed Packages       │"
     echo -e " │    3   List Orphan Packages		   4   List Empty Files	           │"
     echo -e " │    5   List Empty Folders               6   Limit Log Journalctl        │"
-    echo -e " │    7   Cleaning of the Day 				                   │"
+    echo -e " │    7   Cleaning of the Day              8   Profile Cleaner Browser     │"
     echo -e " │-------------------------------------------------------------------------│"
-    echo -e " │    8  *Force Remove Package             9  *Remove Orphan by Stages     │"
-    echo -e " │   10  *Remove Orphan Recursive         11  *Remove Empty Files          │"
-    echo -e " │   12  *Remove Empty Folders            13  *Remove Package Cache        │"
-    echo -e " │   14  *Remove Uninstalled Cache 				           │"    
+    echo -e " │    9  *Force Remove Package            10  *Remove Orphan by Stages     │"
+    echo -e " │   11  *Remove Orphan Recursive         12  *Remove Empty Files          │"
+    echo -e " │   13  *Remove Empty Folders            14  *Remove Package Cache        │"
+    echo -e " │   15  *Remove Uninstalled Cache 				           │"    
     echo -e " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""    
     echo -e "       ✓ Select a number and press [Enter] ✓ e Exit ✓ i Information"
@@ -178,42 +182,49 @@ To exit this information page, press "q".
             echo -e "Cleaning performed! Return to SysClean press [Enter]"
             read
             ;;
-           8)
+	   8)
+            echo
+            profile-cleaner pm
+            echo
+            echo -e "Profile has been cleared for Palemoon! Return to SysClean press [Enter]"
+            read
+            ;;	    
+           9)
             echo
             sudo pacman -Rdd $(pacman -Qq | fzf --color fg:#ffffff,fg+:#215d9c,prompt:#ffffff,info:#c0392b,pointer:#c0392b,spinner:#c0392b --reverse --prompt='Select package to remove (toggle selection with TAB) ▶ ') --color always
             echo
             echo -e "Dependency in force mode removed! Return to Pacli press [Enter]"
             read
             ;;
-           9)
+	  10)
             echo
             /usr/bin/kibojoe/undeps -r
             echo
             echo -e "Orphan by stages removed! Return to SysClean press [Enter]"
             read
             ;;
-	  10)
+	  11)
             echo
             /usr/bin/kibojoe/undeps -ra
             echo
             echo -e "Orphan recursive removed! Return to SysClean press [Enter]"
             read
             ;;
-          11)
+          12)
 	    echo
             /usr/bin/kibojoe/empty_fileclean
             echo
             echo -e "Empty files removed! Return to SysClean press [Enter]"
             read
             ;;  
-          12)
+          13)
 	    echo
             /usr/bin/kibojoe/empty_folderclean
             echo
             echo -e "Empty folders renoved! Return to SysClean press [Enter]"
             read
             ;;
-          13)
+          14)
             echo
             paccache -ruvk1
 	    paccache -rvk2
@@ -221,7 +232,7 @@ To exit this information page, press "q".
             echo -e "Package cache removed! Return to SysClean press [Enter]"
             read
             ;;
-	  14)
+	  15)
             echo
             paccache -dvuk0
 	    paccache -rvuk0
