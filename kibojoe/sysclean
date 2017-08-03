@@ -227,7 +227,7 @@ To exit this information page, press "q".
           14)
             echo
             paccache -ruvk1
-	    paccache -rvk2
+	    paccache -rvk3
             echo
             echo -e "Package cache removed! Return to SysClean press [Enter]"
             read
