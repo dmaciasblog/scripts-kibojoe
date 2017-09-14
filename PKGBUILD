@@ -1,7 +1,7 @@
 # Maintainer: Holmes <holmes_holmes [at] live [dot] com>
 
 pkgname=scripts-kibojoe
-pkgver=1707
+pkgver=1709
 pkgrel=2
 pkgdesc="Scripts for Kibojoe Linux"
 arch=('any')
