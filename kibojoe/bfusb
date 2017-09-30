@@ -1,16 +1,17 @@
 #!/bin/sh
 #
-####################################################
-# Kibojoe Linux					   #
-# Updated 07.04.2017 00:15:14 			   #
-# Version 0.1-6 				   #
-# Name bfusb ; Backup Format USB Tool 		   #
-# Use chmod +x bfusb ; /usr/bin/kibojoe        	   #
-# Credits Diego Macias (dmaciasblog)               #
-# Site https://www.dmaciasblog.com                 #
-# Adapted Holmes (Manjaro Brasil)		   #
-# License Copyleft 			           #
-####################################################
+#########################################
+# Kibojoe Linux				#
+# Updated 29.09.2017 23:05:14 		#
+# Version 0.1-1 			#
+# Name bfusb ; Backup Format USB Tool 	#
+# Use chmod +x bfusb ; /usr/bin/kibojoe #
+# Credits Diego Macias (dmaciasblog)    #
+# Site https://www.dmaciasblog.com      #
+# Adapted Holmes (Kibojoe Linux)	#
+# Site http://kibojoe.org               #
+# License Copyleft 			#
+#########################################
 
 ### FUNCTION CHECK DISCS
     # we list the devices and we cancel the Hotplug 0 before
@@ -171,8 +172,9 @@ while true; do
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"        
     echo -e " │  1     Partition Table                   2     Look USB Drive           │"
     echo -e " │  3	  List Mounted File Systems         4     Backup USB Drive         │"
-    echo -e " │  5	 *Basic Formatting                  6    *Advanced Formatting      │"
-    echo -e " │  7	  Wiki File Systems				                   │"
+    echo -e " │  5	  Wiki File Systems				                   │"
+    echo -e " │-------------------------------------------------------------------------│"
+    echo -e " │  6	 *Basic Formatting                  7    *Advanced Formatting      │"
     echo -e " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""
     echo -e "       ✓ Select a number and press [Enter] ✓ e Exit ✓ i Information"
@@ -208,18 +210,18 @@ while true; do
          read
          ;;
 	5)
-	 basica
-         ;;
-        6)
-         avanzada
-         ;;
-	8)
 	 echo
 	 $BROWSER https://wiki.archlinux.org/index.php/file_systems
 	 echo
 	 echo -e "Homepage visited! Return to BFUSBTool press [Enter]"
 	 read
 	 ;;   
+	6)
+	 basica
+         ;;
+        7)
+         avanzada
+         ;;
 	e)
 	 clear && kill -9 -$PPID
 	 ;;
