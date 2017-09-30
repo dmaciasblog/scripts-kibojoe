@@ -6,7 +6,7 @@
 # Version 0.1-6 				   #
 # Name bfusb ; Backup Format USB Tool 		   #
 # Use chmod +x bfusb ; /usr/bin/kibojoe        	   #
-# Credits D. Macias (dmaciasblog #:~)              #
+# Credits Diego Macias (dmaciasblog)               #
 # Site https://www.dmaciasblog.com                 #
 # Adapted Holmes (Manjaro Brasil)		   #
 # License Copyleft 			           #
@@ -33,7 +33,7 @@ function detectar() {
     if [[ -s /tmp/partition.txt ]]; then
         echo
         echo -e "\t\t\t NAME"
-        echo -e "============================================================"
+        echo -e "---------------------------------------------------------"
         cat /tmp/partition.txt
         echo
     else
@@ -171,7 +171,7 @@ while true; do
     echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"        
     echo -e " │  1     Partition Table                   2     Look USB Drive           │"
     echo -e " │  3	  List Mounted File Systems         4     Backup USB Drive         │"
-    echo -e " │  5	  Basic Formatting                  6     Advanced Formatting      │"
+    echo -e " │  5	 *Basic Formatting                  6    *Advanced Formatting      │"
     echo -e " │  7	  Wiki File Systems				                   │"
     echo -e " └─────────────────────────────────────────────────────────────────────────┘"
     echo ""
